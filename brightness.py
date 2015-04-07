@@ -67,7 +67,7 @@ def get_help():
            "brightness commands:\n" \
            "   status     get current status\n" \
            "   set        set monitor brightness level\n" \
-           "   kset       set keyboard brightness level\n"
+           "   kset       set keyboard brightness level\n" \
            "   help       get detailed help"
 
 
