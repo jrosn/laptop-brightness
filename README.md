@@ -1,4 +1,4 @@
-# asus-brightness
+# laptop-brightness
 
 Keyboard and monitor brightness controller.
 
