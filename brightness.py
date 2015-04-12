@@ -11,10 +11,19 @@ def main():
             print("Current keyboard brightness: " + str(get_current_keyboard_brightness()))
             print("Max keyboard brightness: " + str(get_max_keyboard_brightness()))
         elif len(sys.argv) == 3 and sys.argv[1] == 'set':
-            set_monitor_brightness(int(sys.argv[2]))
+            if sys.argv[2].isdigit(): 
+                set_monitor_brightness(int(sys.argv[2]))
+            elif sys.argv[2] == '+100':
+                set_monitor_brightness(get_current_monitor_brightness() + 100)
+            elif sys.argv[2] == '-100':
+                set_monitor_brightness(get_current_monitor_brightness() - 100)
         elif len(sys.argv) == 3 and sys.argv[1] == 'kset':
             set_keyboard_brightness(int(sys.argv[2]))
-        elif sys.argv[1] == 'help':
+        elif len(sys.argv) == 2 and sys.argv[1] == 'help':
+            print(get_help())
+        else:
+            print("Enter valid command!")
+            print()
             print(get_help())
     else:
         print("Need to be as root!")
